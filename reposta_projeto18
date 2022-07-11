@@ -1,0 +1,21 @@
+def calcular_idade(ano):
+  if (ano < 2022) and (ano > 1921):
+    idade = 2022 - ano
+  else:
+    idade = 'ERRo'
+  return idade
+
+loop = True
+while(loop):
+  print("Calculadora de idade!")
+  nome = input("Digite seu nome completo: ")
+  try:
+    ano_nascimento = int(input("Digite o ano que você nasceu: "))
+    i = calcular_idade(ano_nascimento)
+    if (i == 'ERRo'):
+      print("Ano maior que 2021 e menor que 1922!!!")
+    else:
+      print(nome,"tem",i,"anos!!!")
+      loop = False
+  except:
+    print("Você não digitou um número inteiro!")
